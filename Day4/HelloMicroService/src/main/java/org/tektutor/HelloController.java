@@ -16,9 +16,8 @@ public class HelloController {
 	private MessageRepository messageRepository;
 
 	@GetMapping("hello")
-	public @ResponseBody String getMessage() {
-		Iterable<Message> records = messageRepository.findAll();
-		return records.toString();
+	public @ResponseBody Iterable<Message> getMessage() {
+		return messageRepository.findAll();
 	}
 
 	public static void main( String[] args ) {
