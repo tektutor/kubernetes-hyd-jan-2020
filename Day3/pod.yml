@@ -3,8 +3,9 @@ kind: Pod
 metadata:
   name: my-pod
   labels:
-    app: myapp
+    app: hello 
     ver: "1.0"
+
 spec:
   containers:
   - name: myapp-container

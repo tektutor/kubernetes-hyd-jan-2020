@@ -6,7 +6,7 @@ spec:
   containers:
   - name: myapp-container
     image: busybox
-    command: ['sh', '-c', "echo $(MY_VAR) && sleep 3600"]
+    command: ['sh', '-c', "echo $(MY_VAR)"]
     env:
     - name: MY_VAR
       valueFrom:
