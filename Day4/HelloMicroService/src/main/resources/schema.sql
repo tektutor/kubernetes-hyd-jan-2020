@@ -1,0 +1,7 @@
+CREATE DATABASE tektutor;
+
+CREATE TABLE tektutor ( 
+	id INTEGER NOT NULL AUTO_INCREMENT,
+	message VARCHAR(50),
+	PRIMARY_KEY(id)
+);

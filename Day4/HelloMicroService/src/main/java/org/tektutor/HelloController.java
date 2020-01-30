@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @SpringBootApplication
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 @RestController
 public class HelloController {
 
@@ -16,8 +16,9 @@ public class HelloController {
 	private MessageRepository messageRepository;
 
 	@GetMapping("hello")
-	public @ResponseBody Iterable<Message> getAllMessages() {
-		return messageRepository.findAll();
+	public @ResponseBody String getMessage() {
+		Iterable<Message> records = messageRepository.findAll();
+		return records.toString();
 	}
 
 	public static void main( String[] args ) {
